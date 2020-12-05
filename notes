@@ -1,3 +1,3 @@
-open and simply start the angular server ng serve in 4200 local host
+open and simply start the angular server ng serve in 4200 local host.
 Angular is a javascript framework that in the end manipulates the DOM at run time.It overides the body part of the HTML.
 @component is a decorator used to enhance a class. The component has object properties stoored as meta data that will tell what need to be done with this class once it is converted to javascript.The selector key is the HTML tag we use.
