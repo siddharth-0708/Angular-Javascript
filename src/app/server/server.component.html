@@ -1,5 +1,24 @@
 <h1 [innerText] = 'serverId'></h1>
 <h2> Hello the id is {{serverStatus}}</h2>
+<p>{{serverText}}</p>
 <button class="btn btn-primary" (click) = 'onClicking()'>Alas!</button>
+<input type="text" class="form-control" (input) = 'onTypingName($event)'>
+<input type="text" class="form-control" [(ngModel)] = "serverText">
+<label>Enter name</label>
 <app-warningAlert></app-warningAlert>
-<app-success-alert></app-success-alert>
+<br>
+<!--2 way binding is to avoid writing the function and then updating () will take input and [] will update-->
+<input type="text" class="form-control" [(ngModel)] = "userText"> 
+<label>Enter userName</label>
+<p>The user name is {{userText}}</p>
+<button class="btn btn-primary" [disabled] = '!checkButton()' (click) = 'onReset()'> holaa!</button>
+<br>
+<br>
+<button class="btn btn-primary" (click) = 'onToggle()'> Display Details</button>
+<p *ngIf = "toggle; else noToggle" >The secret passsword is cashew</p>
+<ng-template #noToggle>
+    <p>LMAO</p>
+</ng-template>
+<p *ngFor = "let success of arrayNum; let i = index" [ngStyle] = "{color:i > 4 ? 'blue':'black'}"> {{success}}
+</p> <!--ngfor is a structural directive that changes the dom-->
+
